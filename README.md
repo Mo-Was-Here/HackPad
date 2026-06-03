@@ -1,23 +1,16 @@
-# HackPad
 # 🚀 My Custom 3-Key Hackpad
 
 A custom 3-key mechanical macro keypad featuring an integrated rotary encoder dial and individually addressable RGB backlight LEDs. The entire hardware framework is driven by a Seeed Studio XIAO RP2040 microcontroller and runs on the Python-based KMK keyboard firmware framework.
 
 ---
 
-## 📸 Project Previews
+## 📐 Project Structure
 
-### 📐 1. Overall Assembled Enclosure
-*Replace this line with your Tinkercad workspace 3D canvas layout view or export screenshot.*
-
-### ⚡ 2. Circuit Schematic Layout
-*Replace this line with a screenshot of your clean, 0-error KiCad schematic sheet.*
-
-### 🟢 3. Physical PCB Traces (2D View)
-*Replace this line with a screenshot of your red F.Cu and blue B.Cu copper routed tracks.*
-
-### 🛠️ 4. Assembled PCB Model (3D View)
-*Replace this line with a screenshot of your finished board generated in the KiCad 3D Viewer (Option + 3).*
+This repository contains all source and manufacturing files required to build this project, organized according to Hack Club's shipping guidelines:
+* `/CAD` - Contains the structural 3D design file (Top.STL) for the switch plate enclosure.
+* `/PCB` - Contains the editable KiCad project, schematic, and board layout files.
+* `/firmware` - Contains the core KMK configuration script (main.py).
+* `/production` - Contains the manufacturing-ready gerbers.zip bundle and configuration assets.
 
 ---
 
@@ -42,3 +35,11 @@ A custom 3-key mechanical macro keypad featuring an integrated rotary encoder di
 *   **Rotary Encoder Pins** $\rightarrow$ A: Pin 1 (`board.D0`) / B: Pin 2 (`board.D1`) / Switch: Pin 3 (`board.D2`)
 *   **NeoPixel Data Bus** $\rightarrow$ Pin 7 (`board.D6`)
 *   **Common Rails** $\rightarrow$ Positive: `+3V3` / Negative Return Path: `GND`
+
+---
+
+## 💻 Firmware Setup Instructions
+This board runs CircuitPython with the KMK framework library. To deploy:
+1. Flash the Seeed Studio XIAO with the latest CircuitPython .UF2 payload.
+2. Copy the `kmk` firmware directory onto the root directory of the microcontroller storage volume.
+3. Move the provided `main.py` configuration script onto the board to instantly map keybinds and lighting profiles.
