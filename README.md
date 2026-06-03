@@ -1,5 +1,8 @@
 # 🚀 My Custom 3-Key Hackpad
 
+> ⚠️ **Development Note:** The current 3D enclosure base file (`Top.STL`) is an initial layout draft to fulfill the folder architecture requirements. It is not currently matched to the exact final physical dimensions of the routed PCB and will be updated with precise mechanical alignments before final hardware fabrication.
+
+
 A custom 3-key mechanical macro keypad featuring an integrated rotary encoder dial and individually addressable RGB backlight LEDs. The entire hardware framework is driven by a Seeed Studio XIAO RP2040 microcontroller and runs on the Python-based KMK keyboard firmware framework.
 
 ---
